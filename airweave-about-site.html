@@ -126,7 +126,10 @@
   .case-copy p{margin-top:16px;font-size:clamp(16px,1.6vw,18px);max-width:34ch;color:var(--ink)}
   .hospitality-offer{margin-top:clamp(42px,6vw,76px);padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .hospitality-offer h3{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3vw,36px);line-height:1.2;color:var(--blue)}
-  .hospitality-offer p{margin-top:12px;font-size:clamp(16px,1.6vw,18px);max-width:65ch;color:var(--ink)}
+  .offer-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center;margin-top:12px}
+  .hospitality-offer p{font-size:clamp(16px,1.6vw,18px);max-width:65ch;color:var(--ink)}
+  .offer-row .tlink{margin-top:0;white-space:nowrap}
+  @media(max-width:700px){.offer-row{grid-template-columns:1fr;gap:24px}.offer-row .tlink{justify-self:start}}
 
   /* dark two-column (athletes) */
   .dark2{background:linear-gradient(165deg,#13202e 0%,#23394f 55%,#3c596f 100%);color:#fff;padding:clamp(64px,9vw,120px) 0;overflow:hidden}
@@ -300,8 +303,10 @@
     </div>
     <aside class="hospitality-offer reveal" aria-labelledby="special-offer-title">
       <h3 id="special-offer-title">Special Offer</h3>
-      <p>An exclusive <strong>50% discount</strong> on hospitality sleep solutions for Relais &amp; Châteaux member properties.</p>
-      <a class="tlink" href="https://airweave.com/"><span class="lbl">Discover Airweave</span><span class="ar" aria-hidden="true">→</span></a>
+      <div class="offer-row">
+        <p>An exclusive <strong>50% discount</strong> on hospitality sleep solutions for Relais &amp; Châteaux member properties.</p>
+        <a class="tlink" href="https://airweave.com/"><span class="lbl">Discover Airweave</span><span class="ar" aria-hidden="true">→</span></a>
+      </div>
     </aside>
   </div>
 </section>
